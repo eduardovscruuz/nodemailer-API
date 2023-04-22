@@ -32,7 +32,7 @@ app.post('/send-email', upload.single('file'), (req, res) => {
     service: 'Gmail',
     auth: {
         user: 'eduardovscruuzportfolio@gmail.com',
-        pass: process.env.GMAIL_APP_PASSWORD,
+        pass: 'hoidxckyujjufsyj',
     },
   });
   // Configurar o corpo do e-mail
