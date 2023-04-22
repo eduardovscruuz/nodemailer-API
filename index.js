@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 const multer = require('multer');
 const path = require('path');
 const app = express();
+const port = process.env.PORT || 3000;
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:5501');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -58,7 +59,7 @@ app.post('/send-email', upload.single('file'), (req, res) => {
 app.get('/', (req, res) => {
   res.send('Server is running');
 });
-app.listen(3000, () => console.log('Servidor rodando na porta 3000'));
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
 
 
 
