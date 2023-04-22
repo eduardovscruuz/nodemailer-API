@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://eduardovscruuz.github.io');
+  res.header('Access-Control-Allow-Origin', 'https://eduardovscruuz.github.io/send-email');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
